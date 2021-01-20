@@ -6,9 +6,9 @@ import argparse
 import numpy as np
 from sklearn import metrics
 from torch.utils.data import DataLoader
-from model import RepWalk
+from model import Cross_GAT
 from loss_func import CrossEntropy
-from data_utils import MyDataset, build_tokenizer, build_embedding_matrix
+from data_utils import MyDataset, build_tokenizer
 
 class Instructor:
     ''' Model training and evaluation '''
@@ -18,7 +18,7 @@ class Instructor:
         embedding_matrix = build_embedding_matrix(vocab=opt.tokenizer.vocab['word'], dataset=opt.dataset) # pre-trained glove embeddings
         self.trainset = MyDataset(fname=opt.dataset_file['train'], tokenizer=opt.tokenizer) # training set
         self.testset = MyDataset(fname=opt.dataset_file['test'], tokenizer=opt.tokenizer) # testing set
-        self.model = RepWalk(embedding_matrix, opt).to(opt.device) # neural network model
+        self.model = Cross_GAT(embedding_matrix, opt).to(opt.device) # neural network model
         self._print_args() # print arguments
     
     def _print_args(self): # pring arguments
