@@ -12,7 +12,7 @@ from lxml import etree
 from nltk.tokenize import TreebankWordTokenizer
 from tqdm import tqdm
 
-MODELS_DIR = '/data1/yangyy/pretrained-models'
+MODELS_DIR = '/data1/kkzhang/pretrained-models'
 model_path = os.path.join(
     MODELS_DIR, "biaffine-dependency-parser-ptb-2018.08.23.tar.gz")
 
@@ -23,7 +23,7 @@ def parse_args():
     # Required parameters
     parser.add_argument('--model_path', type=str, default=model_path,
                         help='Path to biaffine dependency parser.')
-    parser.add_argument('--data_path', type=str, default='/data1/SHENWZH/ABSA_online/data/semeval14',
+    parser.add_argument('--data_path', type=str, default='/data1/kkzhang/ABSA_online/data/semeval14',
                         help='Directory of where semeval14 or twiiter data held.')
     return parser.parse_args()
 

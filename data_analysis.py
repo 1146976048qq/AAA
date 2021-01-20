@@ -1,5 +1,5 @@
 '''
-Data analysis from Amazon Dataset
+Data analysis for Amazon Dataset (four domains)
 '''
 import argparse
 import json
