@@ -2,10 +2,10 @@ import torch
 import torch.nn as nn
 from layer import DynamicLSTM
 
-class RepWalk(nn.Module):
+class AAA(nn.Module):
     ''' Neural Network Structure '''
     def __init__(self, embedding_matrix, opt):
-        super(RepWalk, self).__init__() # initialize the super class
+        super(AAA, self).__init__() # initialize the super class
         
         # ''' common variables '''
         # word_dim = opt.word_dim_dim  #词向量维度
